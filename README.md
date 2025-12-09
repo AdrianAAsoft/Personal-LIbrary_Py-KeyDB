@@ -10,9 +10,16 @@ Modificar la aplicación de biblioteca personal para reemplazar el uso de MongoD
 3. windows + R
 4. cmd + enter
 5. En el cmd escribir lo siguiente:
-   1step es una variable que especifica el nombre del contenedor
+   - 1step es una variable que especifica el nombre del contenedor
+   - 6505 es el puerto que le colocas al contenedor (es modficable)
+   - 6379 es el puerto en el que escucha keydb (no modificable)
 ```bash
-docker run -p 6505:6505 --name 1step -d eqalpha/keydb 
+docker run -p 6505:6379 --name 1step -d eqalpha/keydb 
+```
+
+## 📌 Instalacion de dependencias:
+```bash
+pip install redis python-dotenv
 ```
 
 ## 📁 Archivos
